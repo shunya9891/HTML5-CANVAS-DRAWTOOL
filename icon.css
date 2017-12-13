@@ -1,0 +1,333 @@
+/* アイコン共通CSS */
+.icon{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right:0px;
+  margin-bottom:0px;
+  position: relative;
+}
+
+/*▶右*/
+.icon1:after,.icon1:before{
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #fff;
+  position: absolute;
+  top: 34px;
+  left: 4px;
+}
+.icon1:before{
+  background-color: #999999;
+  left: 12px;
+}
+
+/*◀︎左*/
+.icon2:after,.icon2:before{
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #fff;
+  position: absolute;
+  top: 34px;
+  left: 12px;
+}
+.icon2:before{
+  background-color: #999999;
+  left: 4px;
+}
+
+/*チェック*/
+.icon3:after,.icon3:before{
+  display: block;
+  content: '';
+  width: 8px;
+  height: 38px;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 28px;
+  left: 49px;
+}
+.icon3:before{
+  height: 24px;
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 31px;
+}
+
+/*丸*/
+.icon4:after{
+  display: block;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 6px solid #999999;
+  border-radius: 30px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+/*バツ*/
+.icon5:before,.icon5:after{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 40px;
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #999999;
+  border-radius: 0px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+.icon5:after{
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*プラス*/
+.icon6:before,.icon6:after{
+  display: block;
+  content: '';
+  width: 7px;
+  height: 40px;
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 25px;
+  left: 41px;
+}
+.icon6:before{
+  width: 40px;
+  height: 7px;
+  top: 41px;
+  left: 25px;
+}
+
+/*マイナス*/
+.icon7:before{
+  display: block;
+  content: '';
+  width: 40px;
+  height: 7px;
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 41px;
+  left: 25px;
+}
+
+/*右矢印*/
+.icon8:before{
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 20px solid #999999;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+.icon8:after{
+  display: block;
+  content: '';
+  width: 40px;
+  height: 7px;
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 41px;
+  left: 25px;
+}
+
+/*上矢印*/
+.icon9:before{
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #999999;
+  border-left: 15px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+.icon9:after{
+  display: block;
+  content: '';
+  width: 7px;
+  height: 41px;
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 25px;
+  left: 41px;
+}
+
+/*左矢印*/
+.icon10:before{
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 20px solid #999999;
+  border-bottom: 15px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.icon10:after{
+  display: block;
+  content: '';
+  width: 40px;
+  height: 7px;
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 41px;
+  left: 25px;
+}
+
+/*メニュー*/
+.icon11:before{
+  display: block;
+  content: '';
+  width: 40px;
+  height: 4px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px #ffffff, 0 20px #ffffff;
+  box-shadow: 0 10px #ffffff, 0 20px #ffffff, 0 30px #ffffff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.icon11:after{
+  display: block;
+  content: '';
+  width: 36px;
+  height: 35px;
+  border: 0px solid #ffffff;
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
+
+/*…*/
+.icon12:before{
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #999999;
+  border-radius: 8px;
+  -webkit-box-shadow: 12px 0 #999999, 24px 0 #999999;
+  box-shadow: 12px 0 #999999, 24px 0 #999999;
+  position: absolute;
+  top: 41px;
+  left: 30px;
+}
+
+/*ホーム*/
+.icon13:before{
+  display: block;
+  content: '';
+  width: 30px;
+  height: 20px;
+  background-color: #999999;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+.icon13:after{
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 19px solid #999999;
+  border-left: 20px solid transparent;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+
+/*ホーム2*/
+.icon14:before{
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 10px solid #999999;
+  border-bottom: 0;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+.icon14:after{
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 19px solid #999999;
+  border-left: 20px solid transparent;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+
+/*虫メガネ*/
+.icon15:before{
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 6px solid #999999;
+  border-radius: 30px;
+  position: absolute;
+  top: 23px;
+  left: 25px;
+}
+.icon15:after{
+  display: block;
+  content: '';
+  width: 7px;
+  height: 25px;
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #999999;
+  border-radius: 10px;
+  position: absolute;
+  top: 43px;
+  left: 53px;
+}

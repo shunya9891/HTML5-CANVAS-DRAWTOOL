@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>SignAPI</title>
+<link href="canvas.css" rel="stylesheet">
+<link href="icon.css" rel="stylesheet">
+<script type="text/javascript" src="canvas.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+	<body>
+		<div class="container" style="border:none">
+			<!--ヘッダー-->
+			<div class="container__header">HTML5 CANVAS + Javascript API
+				<label for="open">
+					<div class="icon icon11" style="position:absolute;top:10px;right:0"></div>
+				</label>
+			</div>
+			<!--CANVASー-->
+			<div class="containermain">
+				<div class="ccontainermain__item">
+					<div class="canvasback">
+						<canvas id="mycanvas" width="1400px"  height="600px"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--ドロワーメニュー -->
+		<label for="open"></label>
+		<input id="open" type="checkbox">
+
+		<div id="drawermenu">
+			<label for="open">
+				<div class="icon icon5"  style="position:absolute;top:0px;right:10px"></div>
+			</label>
+			<div class="containerdrawer">
+				<div class="containerdrawer__item1" >
+					<!--color palet-->
+					<h3>color<h3>
+					<table id="penColor" class="colorpalet">
+						<tr>
+							<td colspan="2" rowspan="2" style="background:#333333" id="nowcolor"></td>
+							<td style="background:#ffffff" id="#ffffff"></td>
+							<td style="background:#d3d3d3" id="#d3d3d3"></td>
+							<td style="background:#c0c0c0" id="#c0c0c0"></td>
+							<td style="background:#808080" id="#808080"></td>
+							<td style="background:#696969" id="#696969"></td>
+							<td style="background:#000000" id="#000000"></td>
+						</tr>
+						<tr>
+							<td style="background:#b0c4de" id="#b0c4de"></td>
+							<td style="background:#778899" id="#778899"></td>
+							<td style="background:#708090" id="#708090"></td>
+							<td style="background:#4682b4" id="#4682b4"></td>
+							<td style="background:#191970" id="#191970"></td>
+							<td style="background:#0000ff" id="#0000ff"></td>
+						</tr>
+						<tr>
+							<td style="background:#98fb98" id="#98fb98"></td>
+							<td style="background:#7fffd4" id="#7fffd4"></td>
+							<td style="background:#8fbc8f" id="#8fbc8f"></td>
+							<td style="background:#66cdaa" id="#66cdaa"></td>
+							<td style="background:#3cb371" id="#3cb371"></td>
+							<td style="background:#2e8b57" id="#2e8b57"></td>
+							<td style="background:#228b22" id="#228b22"></td>
+							<td style="background:#008000" id="#008000"></td>
+						</tr>
+						<tr>
+							<td style="background:#f5deb3" id="#f5deb3"></td>
+							<td style="background:#deb887" id="#deb887"></td>
+							<td style="background:#d2b48c" id="#d2b48c"></td>
+							<td style="background:#f0e68c" id="#f0e68c"></td>
+							<td style="background:#ffff00" id="#ffff00"></td>
+							<td style="background:#ffd700" id="#ffd700"></td>
+							<td style="background:#ffa500" id="#ffa500"></td>
+							<td style="background:#d2691e" id="#d2691e"></td>
+						</tr>
+						<tr>
+							<td style="background:#9400d3" id="#9400d3"></td>
+							<td style="background:#800080" id="#800080"></td>
+							<td style="background:#d8bfd8" id="#d8bfd8"></td>
+							<td style="background:#ffc0cb" id="#ffc0cb"></td>
+							<td style="background:#c71585" id="#c71585"></td>
+							<td style="background:#ff1493" id="#ff1493"></td>
+							<td style="background:#ff4500" id="#ff4500"></td>
+							<td style="background:#ff0000" id="#ff0000"></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="containerdrawer__item1" >
+					<h3>clear<h3>
+					<button  id="sn_clear">clear</button>
+				</div>
+
+				<div class="containerdrawer__item1" >
+					<h3>output base64<h3>
+					<button  id="sn_tobase64">output base64</button>
+					<textarea id="base64text"></textarea>
+				</div>
+
+				<div class="containerdrawer__item1" >
+					<h3>input base64<h3>
+					<button id="sn_rebase64">input base64</button>
+					<textarea id="rebase64text"></textarea>
+				</div>
+			</div>
+
+			<div class="containerdrawer" >
+				<div class="containerdrawer__item1" >
+					<h3>input base64<h3>
+					<select id='penWidth' name="pen" >
+						<option value="1">1px</option>
+						<option value="2">2px</option>
+						<option value="3"selected>3px</option>
+						<option value="4">4px</option>
+						<option value="5">5px</option>
+						<option value="6">6px</option>
+						<option value="7">7px</option>
+						<option value="8">8px</option>
+						<option value="9">9px</option>
+						<option value="10">10px</option>
+						<option value="20">20px</option>
+						<option value="30">30px</option>
+						<option value="40">40px</option>
+					</select>
+				</div>
+
+				<div class="containerdrawer__item1" >
+					<h3>mouse (X,Y)<h3>
+					<div id="info"></div>
+				</div>
+
+				<div class="containerdrawer__item2" >
+					<u>このCanvasについて</u><br>
+					<li>２次ベジェ曲線を使用することでなめらかな曲線を実現</li>
+					<li>1400px　x　700px以上を推奨</li>
+					<li>マウス、タッチに対応</li>
+					<br>
+					<u>Canvas領域を最前線い持ってくるには</u><br>
+					<li>全体構成（例）として親DIV、子要素１、子要素２を用意する</li>
+					<li>親DIVにposition:relataiveを設定</li>
+					<li>子要素１をCANVAS領域としてCANVASタグにz-index:2を設定</li>
+					<li>子要素２をコンテンツ領域として、子要素タグにz-index:1を設定する</li>
+					<br>
+				</div>
+			</div>
+		</div>
+	</body>
+</html

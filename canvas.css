@@ -1,0 +1,173 @@
+/***************************************************/
+/* ブラウザ依存CSSのクリア                            */
+/***************************************************/
+html, body, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+html, body{
+	padding:0px;
+	margin:0px;
+	margin-left:0px;
+	text-align:left;
+	background-color: #f0f0f0;
+	font-size:10px;
+	color: #333;
+	height: 100%;
+}
+table {
+	border-collapse: collapse;
+	border:solid 2px #999999;
+}
+td {
+	border:solid 2px #999999;
+	height:50px;
+	text-align:center;
+}
+button{
+	border:none;
+	width:120px;
+	height:40px;
+	background:#ff7a7a
+}
+textarea{
+	width:200px;
+	height:150px;
+	border:solid 1px #fff;
+	background:transparent;
+}
+/***************************************************/
+/* 基本レイアウト　　　　　                            */
+/***************************************************/
+.container {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	/*flex-wrap: wrap;*/
+	align-items: stretch;
+	justify-content:center;
+	align-content:center;
+}
+.container__header{
+	height:60px;
+	font-size:40px;
+	color: #999999;
+	background:linear-gradient(-135deg,  #BE93C5, #7BC6CC);
+	padding-left:20px;
+}
+.containermain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex:1;
+}
+.containermain__item{
+	padding:1%;
+}
+.containerdrawer {
+	display: flex;
+	width:100%;
+	height:280px;
+ 	display: flex;
+	align-items: flex-start;
+	padding:10px;
+	flex-wrap: wrap;
+	border:none;
+}
+.containerdrawer__item1{
+	flex-basis:250px;
+	height:250px;
+	padding:10px;
+	margin:10px;
+	border:solid 1px #666;
+}
+.containerdrawer__item2{
+	flex-basis:540px;
+	height:250px;
+	padding:10px;
+	border:solid 1px #666;
+	color:#fff;
+	margin:10px;
+}
+
+/***************************************************/
+/* CANVAS用スタイル　　　　       　　　　　　　        */
+/***************************************************/
+.canvasback{
+	padding:3px;
+	background:linear-gradient(-135deg,  #BE93C5, #7BC6CC);
+	text-decoration:none;
+	font-size: 0px;
+}
+#mycanvas{
+	background-color: #fff;
+}
+/***************************************************/
+/* カラーパレット用テーブルスタイル　　　　               */
+/***************************************************/
+.colorpalet {
+	border-collapse: separate;
+	border:none;
+}
+.colorpalet tr {
+	height:30px;
+	border:none;
+}
+.colorpalet tr td {
+	width:30px;
+	height:30px;
+	border:none;
+}
+
+/***************************************************/
+/* canvas領域を最前面に持ってくるサンプル               */
+/***************************************************/
+.contents_oya{
+	position:relative;
+}
+.contents_canvas{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+.contents_option{
+	position:absolute;
+	top:350px;
+	left:0;
+	z-index:1;
+}
+/***************************************************/
+/* ドロワーメニュー　　　　　　　　　　　　               */
+/***************************************************/
+#drawermenu{
+	width:100%;
+	height:650px;
+	position:fixed;
+	z-index: 100;
+	top:-650px;
+	right:0px;
+	background-color:rgba(85,84,93,1);
+	transition: top .5s, bottom .5s
+}
+#open {
+	display:none;
+}
+#open:checked + #drawermenu{
+	top:0px;
+}
